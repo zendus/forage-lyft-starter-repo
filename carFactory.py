@@ -26,11 +26,13 @@ class CarFactory:
         battery = spindler_battery.SpindlerBattery(last_service_date, current_date)
         return Car(engine=engine, battery=battery)
     
+    @staticmethod
     def create_rorschach(current_mileage, last_service_mileage, last_service_date, current_date) -> Car:
         engine = willoughby_engine.WilloughbyEngine(current_mileage, last_service_mileage)
         battery = nubbin_battery.NubbinBattery(last_service_date, current_date)
         return Car(engine=engine, battery=battery)
     
+    @staticmethod
     def create_thovex(current_mileage, last_service_mileage, last_service_date, current_date) -> Car:
         engine = capulet_engine.CapuletEngine(current_mileage, last_service_mileage)
         battery = nubbin_battery.NubbinBattery(last_service_date, current_date)
